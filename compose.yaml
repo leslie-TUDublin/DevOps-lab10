@@ -1,0 +1,13 @@
+services:
+  gradle-lab10:
+    image: gradle:8-jdk17
+    container_name: gradle-lab10
+    working_dir: /home/gradle/project
+    volumes:
+      - .:/home/gradle/project
+    ports:
+      - "5455:5455"
+    stdin_open: true
+    tty: true
+    command: >
+      bash -c "tail -f /dev/null"
